@@ -1,13 +1,29 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="todoApp">
 <head>
   <meta charset="UTF-8">
   <title>Stuff Todo</title>
 </head>
-<body ng-app="todoApp">
-  yo
+<body ng-controller="TodoListController as todoList">
+  <h1>Stuff Todos</h1>
+  <input type="text" placeholder="What stuff needs doing?" ng-model='todoList.todoText'>
+  <button ng-click='todoList.addTodo()' id="submitTodo">Add</button>
+  <ul id="todos-list">
+    <li class="todo" ng-repeat="todo in todoList.todos">
+      <input type="checkbox">
+      todo title
+      <input type="button" value="X">
+    </li>
+  </ul>
+  3 items left
+  <nav class="tab-selector">All</nav>
+  <nav class="tab-selector">Active</nav>
+  <nav class="tab-selector">Complete</nav>
+  <nav class="tab-selector">Clear All</nav>
+  
   <script src="bower_components/angular/angular.min.js"></script>
   <script src="bower_components/angular-resource/angular-resource.min.js"></script>
   <script src="js/application.js"></script>
+  <script src="js/todoListController.js"></script>
 </body>
 </html>
