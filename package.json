@@ -1,0 +1,27 @@
+{
+  "name": "todo_challenge_solution",
+  "version": "1.0.0",
+  "description": "A todos list",
+  "main": "index.js",
+  "scripts": {
+    "webdriver": "./node_modules/protractor/bin/webdriver-manager update && ./node_modules/protractor/bin/webdriver-manager start",
+    "start": "./node_modules/http-server/bin/http-server . -p 8000",
+    "e2e": "./node_modules/protractor/bin/protractor test/e2e/conf.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/makersacademy/todo_challenge.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/makersacademy/todo_challenge/issues"
+  },
+  "homepage": "https://github.com/makersacademy/todo_challenge#readme",
+  "devDependencies": {
+    "bower": "^1.5.2",
+    "http-server": "^0.8.0",
+    "protractor": "^2.2.0"
+  }
+}
