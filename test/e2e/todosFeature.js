@@ -9,5 +9,11 @@ describe('Todos list', function() {
     element(by.model('todoList.todoText')).sendKeys('Do all the things!');
     element(by.css('[id=submitTodo]')).click();
     expect(todoList.count()).toEqual(1);
+    expect(todoList.last().getText()).toEqual('Do all the things!')
+  })
+
+  it('shows a total number of todos', function() {
+    var todosCount = element(by.css('[id=todoCount]'));
+    expect(todosCount)
   })
 });
