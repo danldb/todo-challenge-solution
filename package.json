@@ -7,7 +7,7 @@
     "webdriver": "./node_modules/protractor/bin/webdriver-manager update && ./node_modules/protractor/bin/webdriver-manager start",
     "start": "./node_modules/http-server/bin/http-server . -p 8000",
     "e2e": "./node_modules/protractor/bin/protractor test/e2e/conf.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "./node_modules/karma/bin/karma start test/karma.conf.js --single-run"
   },
   "repository": {
     "type": "git",
@@ -27,6 +27,7 @@
     "jasmine-core": "^2.3.4",
     "karma": "^0.13.9",
     "karma-chrome-launcher": "^0.2.0",
+    "karma-firefox-launcher": "^0.1.6",
     "karma-jasmine": "^0.3.6",
     "karma-phantomjs-launcher": "^0.2.1",
     "phantomjs": "^1.9.18",
